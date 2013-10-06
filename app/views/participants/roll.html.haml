@@ -1,0 +1,9 @@
+.roll.text-center
+  %h2= 'Congratulations!'
+
+  %h3= "#{@participant.full_name} has been enrolled"
+  - if @participant.company
+    %h5= @participant.company
+  %h5= @participant.email
+  - if @participant.something_funny
+    %i= "“#{@participant.something_funny}”"
