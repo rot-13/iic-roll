@@ -12,6 +12,7 @@ gem 'bootstrap-sass'
 gem 'haml'
 gem 'compass-rails', '~> 2.0.alpha.0'
 gem 'email_validator'
+gem 'animation'
 
 # This seem to help keep compass-rails alive, see:
 # http://stackoverflow.com/questions/16877028/why-does-compass-watch-say-it-cannot-load-sass-script-node-loaderror

@@ -1,0 +1,16 @@
+!!! 5
+%html.no-js{:lang => 'en'}
+  %head
+    %meta{:charset => 'utf-8'}
+    %title= t('title')
+    %link{:href => '/favicon.ico', :rel => 'shortcut icon'}
+    = csrf_meta_tags
+    = stylesheet_link_tag 'application', 'data-turbolinks-track' => true, :media => 'all'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  %body
+    = render 'layouts/background'
+    - if blank_page?
+      = render 'layouts/blank_page'
+    - else
+      = render 'layouts/page'
+    - yield :bottom_javascripts
