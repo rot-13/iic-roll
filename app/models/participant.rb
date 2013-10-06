@@ -13,7 +13,7 @@ class Participant < ActiveRecord::Base
   def email_unique
     my_reduced_email = reduced_email(self.email)
     all_reduced_emails = Participant.all.to_a.map(&:email).map { |email| reduced_email(email) }
-    self.errors << "You already enrolled" if all_reduced_emails.include?(my_reduced_email)
+    self.errors.add(:email, "already enrolled") if all_reduced_emails.include?(my_reduced_email)
   end
 
   def reduced_email(email)
