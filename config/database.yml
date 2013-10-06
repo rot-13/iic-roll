@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  database: iic_roll_db
+  host: localhost
+  pool: 5
+
+development:
+  <<: *default
+  database: iic_roll_local
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: iic_roll_production
+  pool: 5
