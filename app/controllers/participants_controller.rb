@@ -9,8 +9,15 @@ class ParticipantsController < ApplicationController
   end
 
   def create
-    @participant = Participant.create(participant_params)
-    redirect_to root_path
+    @participant = Participant.new(participant_params)
+    if @participant.valid?
+      @participant.save
+      flash[:notice] = "You've enrolled! Great!"
+      redirect_to root_path
+    else
+      flash[:error] = @participant.errors.full_messages.first
+      redirect_to new_participant_path
+    end
   end
 
   def show

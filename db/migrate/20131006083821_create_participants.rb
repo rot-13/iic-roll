@@ -4,7 +4,7 @@ class CreateParticipants < ActiveRecord::Migration
       t.string :full_name, null: false
       t.string :email, null: false
       t.string :company
-      t.string :something_funny, null: false
+      t.string :something_funny
       t.boolean :rolled, default: false
     end
   end
