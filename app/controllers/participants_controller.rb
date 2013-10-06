@@ -12,7 +12,7 @@ class ParticipantsController < ApplicationController
     @participant = Participant.new(participant_params)
     if @participant.valid?
       @participant.save
-      flash[:notice] = "You've enrolled! Great!"
+      flash[:notice] = "You successfully signed up - Awesome"
       redirect_to root_path
     else
       flash[:error] = @participant.errors.full_messages.first
