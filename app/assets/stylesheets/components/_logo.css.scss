@@ -1,0 +1,11 @@
+.logo {
+  margin-top: 15px;
+  position: relative;
+  @include animation(balloon 2s ease-in-out alternate infinite);
+}
+
+@include keyframes(balloon) {
+  $delta: 50px;
+  0% { top: 0 }
+  100% { top: $delta; }
+}
