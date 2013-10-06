@@ -1,4 +1,6 @@
-= render 'layouts/messages'
-= render 'components/logo'
-.container.iic-roll-container
-  = yield
+.page
+  = render 'layouts/messages'
+  .logo-container
+    = render 'components/logo'
+  .container.iic-roll-container
+    = yield

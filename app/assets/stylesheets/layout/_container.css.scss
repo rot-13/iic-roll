@@ -7,7 +7,7 @@
 
 .container.iic-roll-container {
   width: 470px;
-  margin-top: $top;
+  float: left;
 
   .control-group:last-child {
     margin-bottom: 0;
@@ -18,3 +18,13 @@
   }
 }
 
+.logo-container {
+  float: left;
+}
+
+.page {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  width: 970px;
+}

@@ -1,7 +1,7 @@
 .logo {
-  margin-top: $top;
-  left: 100px;
-  position: absolute;
+  position: relative;
+  margin-top: -80px;
+  padding: 20px;
   @include animation(balloon 2s ease-in-out alternate infinite);
 }
 
