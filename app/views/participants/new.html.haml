@@ -6,7 +6,7 @@
   .control-group
     = f.label :email, '* Email', :class => 'control-label'
     .controls
-      = f.text_field :email, :placeholder => t('form.placeholders.email'), :class => 'input-xlarge'
+      = f.email_field :email, :placeholder => t('form.placeholders.email'), :class => 'input-xlarge'
   .control-group
     = f.label :company, :class => 'control-label'
     .controls
