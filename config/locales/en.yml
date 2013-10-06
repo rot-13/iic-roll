@@ -1,2 +1,10 @@
 en:
   title: "IIC Roll"
+  form:
+    placeholders:
+      full_name: 'Your full name'
+      email: 'Your email'
+      something_funny: 'Write something funny'
+  helpers:
+    submit:
+     create: "Submit"

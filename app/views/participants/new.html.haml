@@ -1,0 +1,17 @@
+= form_for @participant , :html => {:class => 'project-form form-horizontal'} do |f|
+  .control-group
+    = f.label :full_name, :class => 'control-label'
+    .controls
+      = f.text_field :full_name, :placeholder => t('form.placeholders.full_name'), :class => 'input-xlarge'
+  .control-group
+    = f.label :email, :class => 'control-label'
+    .controls
+      = f.text_field :email, :placeholder => t('form.placeholders.email'), :class => 'input-xlarge'
+  .control-group
+    = f.label :something_funny, :class => 'control-label'
+    .controls
+      = f.text_area :something_funny, :placeholder => t('form.placeholders.something_funny'), :class => 'input-xlarge'
+
+  .control-group
+    .controls
+      = f.submit :class => 'btn btn-primary', :id => 'participant-submit-button'
