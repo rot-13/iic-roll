@@ -5,8 +5,13 @@ formValidation = ->
     nameField: $('form #participant_full_name')
     emailField: $('form #participant_email')
 
+  validateEmail = (email) ->
+    re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    re.test(email)
+
+
   checkIfCanSubmit = ->
-    canSubmit = _.any(ui.nameField.val()) && _.any(ui.emailField.val())
+    canSubmit = _.any(ui.nameField.val()) && _.any(ui.emailField.val()) && validateEmail(ui.emailField.val())
     ui.submitButton.toggleClass('disabled', !canSubmit)
     canSubmit
 
