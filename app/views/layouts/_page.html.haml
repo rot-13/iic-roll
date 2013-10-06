@@ -2,5 +2,7 @@
   = render 'layouts/messages'
   .logo-container
     = render 'components/logo'
-  .container.iic-roll-container
-    = yield
+  .content
+    = image_tag('logo_txt.png', class: 'logo-txt')
+    .container.iic-roll-container
+      = yield

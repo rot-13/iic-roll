@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20131006083821) do
   create_table "participants", force: true do |t|
     t.string "full_name",       null: false
     t.string "email",           null: false
+    t.string "company"
     t.string "something_funny", null: false
   end
 

@@ -5,18 +5,29 @@
   @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.15));
 }
 
-.container.iic-roll-container {
-  width: 470px;
+.content {
   float: left;
 
-  .control-group:last-child {
-    margin-bottom: 0;
+  .logo-txt {
+    width: 488px;
+    margin-bottom: 10px;
+    -webkit-filter: brightness(10);
   }
 
-  form {
-    margin: 0;
+  .container.iic-roll-container {
+    width: 470px;
+
+    .control-group:last-child {
+      margin-bottom: 0;
+    }
+
+    form {
+      margin: 0;
+    }
   }
+
 }
+
 
 .logo-container {
   float: left;
