@@ -2,6 +2,8 @@ class ParticipantsController < ApplicationController
 
   respond_to :html
 
+  http_basic_authenticate_with name: "iic", password: "1234", only: :roll
+
   def new
     @participant = Participant.new
   end
